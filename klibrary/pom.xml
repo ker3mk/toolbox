@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ker3mk.lib</groupId>
+    <artifactId>library</artifactId>
+    <name>Ker3mK Library</name>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <modules>
+        <module>utils</module>
+    </modules>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>kron-devsvr-ist1-releases</name>
+            <url>http://artifactory.kron.com.tr:8081/artifactory/libs-release</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>snapshots</id>
+            <name>kron-devsvr-ist1-snapshots</name>
+            <url>http://artifactory.kron.com.tr:8081/artifactory/libs-snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4</version>
+        </dependency>
+    </dependencies>
+</project>
