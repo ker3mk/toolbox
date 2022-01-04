@@ -4,13 +4,14 @@
         xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.ker3mk.lib</groupId>
-    <artifactId>library</artifactId>
-    <name>Ker3mK Library</name>
-    <packaging>pom</packaging>
+    <groupId>com.klibrary.main</groupId>
+    <artifactId>klibrary</artifactId>
+    <name>K Library</name>
     <version>1.0</version>
+    <packaging>pom</packaging>
+
     <modules>
-        <module>utils</module>
+        <module>klibrary-utils</module>
     </modules>
 
     <repositories>

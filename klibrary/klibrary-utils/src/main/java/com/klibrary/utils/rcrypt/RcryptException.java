@@ -1,4 +1,4 @@
-package rcrypt;
+package com.klibrary.utils.rcrypt;
 
 
 class RcryptException extends Exception

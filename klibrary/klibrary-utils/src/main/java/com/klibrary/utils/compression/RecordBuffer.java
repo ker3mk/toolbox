@@ -1,4 +1,4 @@
-package compression;
+package com.klibrary.utils.compression;
 
 import java.nio.ByteBuffer;
 

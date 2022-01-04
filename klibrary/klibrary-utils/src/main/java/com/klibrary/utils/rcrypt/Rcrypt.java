@@ -3,7 +3,7 @@
 // Decompiler options: packimports(3)
 // Source File Name:   Rcrypt.java
 
-package rcrypt;
+package com.klibrary.utils.rcrypt;
 
 
 

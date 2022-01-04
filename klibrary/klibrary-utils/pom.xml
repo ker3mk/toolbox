@@ -4,13 +4,26 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ker3mk.lib</groupId>
+    <groupId>com.klibrary.utils</groupId>
     <artifactId>utils</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
     <parent>
-        <groupId>com.ker3mk.lib</groupId>
-        <artifactId>library</artifactId>
-        <relativePath>../pom.xml</relativePath>
+        <groupId>com.klibrary.main</groupId>
+        <artifactId>klibrary</artifactId>
+        <relativePath>/../pom.xml</relativePath>
         <version>1.0</version>
     </parent>
 
@@ -32,7 +45,11 @@
             <version>2.5</version>
             <scope>provided</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.12</version>
+        </dependency>
     </dependencies>
 
 

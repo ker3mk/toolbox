@@ -1,4 +1,4 @@
-package compression;// QuickLZ data compression library
+package com.klibrary.utils.compression;// QuickLZ data com.klibrary.utils.compression library
 // Copyright (C) 2006-2011 Lasse Mikkel Reinhold
 // lar@quicklz.com
 //
@@ -24,7 +24,7 @@ public final class QuickLZ
 	public final static int QLZ_VERSION_MINOR = 5;
 	public final static int QLZ_VERSION_REVISION = 0;
 
-	// Decrease QLZ_POINTERS_3 to increase compression speed of level 3. Do not
+	// Decrease QLZ_POINTERS_3 to increase com.klibrary.utils.compression speed of level 3. Do not
 	// edit any other constants!
 	private final static int HASH_VALUES = 4096;
 	private final static int MINOFFSET = 2;

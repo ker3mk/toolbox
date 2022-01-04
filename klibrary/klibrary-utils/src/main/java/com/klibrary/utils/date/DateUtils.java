@@ -1,9 +1,10 @@
-package date;
+package com.klibrary.utils.date;
 
 import java.util.Calendar;
 import java.util.Date;
 
 public class DateUtils {
+    public static final long MINUTE = 1000 * 60;
     public static final long HOUR = 1000 * 60 * 60;
     public static final long DAY = 1000 * 60 * 60 * 24;
     public static final long QUARTER_HOUR = 1000 * 60 * 15;
@@ -84,4 +85,61 @@ public class DateUtils {
         c.set(Calendar.SECOND, 0);
         c.set(Calendar.MILLISECOND, 0);
     }
+
+    public static int difMinutes(Date lastDate, Date firstDate ) {
+        return getTodayMinutesAsOfNow(lastDate)- (getTodayMinutesAsOfNow(firstDate));
+    }
+
+    public static int getTodayMinutesAsOfNow(Date date) {
+        long result =date.getTime()/60000;
+        return (int)  result;
+    }
+
+    private static Calendar truncateToMonth(Date date) {
+        Calendar c = truncateToDay(date);
+        c.set(Calendar.DAY_OF_MONTH, 1);
+
+        return c;
+    }
+
+    private static Calendar truncateToDay(Date date) {
+        Calendar c = Calendar.getInstance();
+        c.setTime(date);
+
+        c.set(Calendar.HOUR_OF_DAY, 0);
+        c.set(Calendar.MINUTE, 0);
+        c.set(Calendar.SECOND, 0);
+        c.set(Calendar.MILLISECOND, 0);
+
+        return c;
+    }
+
+    public static Date minusMinutes(Date date, int amount) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.MINUTE, -amount);
+        return calendar.getTime();
+    }
+
+    public static Date minusHours(Date date, int amount) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.HOUR, -amount);
+        return calendar.getTime();
+    }
+
+
+    public static Date zeroMillis(Date date) {
+        Calendar c = Calendar.getInstance();
+        c.setTime(date);
+        c.set(Calendar.MILLISECOND, 0);
+
+        return c.getTime();
+
+    }
+
+    public static Date getMinuteOfDate(Date date) {
+        return new Date(date.getTime() - date.getTime() % MINUTE);
+    }
+
 }
