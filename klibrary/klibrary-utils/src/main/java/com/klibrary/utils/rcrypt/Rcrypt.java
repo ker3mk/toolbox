@@ -22,7 +22,7 @@ import java.util.Random;
 
 public class Rcrypt {
     static String DEFAULT_CRYPT_SECRET = "secretKey";
-
+    //https://www.ietf.org/rfc/rfc4880.txt
     Rcrypt() {
     }
 
